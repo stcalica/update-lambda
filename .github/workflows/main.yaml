@@ -1,0 +1,17 @@
+name: Test Run
+on:
+  push
+jobs:
+  lambda:
+    runs-on: ubuntu-latest
+    steps:
+      - run: touch file.txt
+      - run: zip lambda.zip file.txt
+      - uses: stcalica/update-lambda
+        with:
+          package: lambda.zip
+          function-name: TEST-FUNCTION
+          AWS_REGION: ${secrets.AWS_REGION}
+          AWS_REGION: ${secrets.AWS_REGION}
+          AWS_SECRET_ID: ${secrets.AWS_SECRET_ID}
+          AWS_SECRET_KEY: ${secrets.AWS_SECRET_KEY}
