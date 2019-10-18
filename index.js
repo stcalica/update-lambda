@@ -11,7 +11,10 @@ try {
   const AWS_REGION = core.setSecret(core.getInput('AWS_REGION'));
 
   console.log(`Updating Function Name ${functionName} with ${package}!`);
-  var zipBuffer = fs.readFileSync(`./${package}`);
+  fs.readdirSync('.').forEach(file => {
+    console.log(file);
+  });
+    var zipBuffer = fs.readFileSync(`./${package}`);
   core.debug('Package put into memory buffer');
 
   const lambda = new AWS.Lambda({
