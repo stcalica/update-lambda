@@ -8,7 +8,6 @@ jobs:
       - uses: actions/checkout@master
       - run: echo "THIS IS A TEST PACKAGE" > file.txt
       - run: zip lambda.zip file.txt
-      - run: file lambda.zip
       - uses: stcalica/update-lambda
         with:
           package: lambda.zip
