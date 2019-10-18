@@ -7,7 +7,8 @@ jobs:
     steps:
       - run: touch file.txt
       - run: zip lambda.zip file.txt
-      - uses: stcalica/update-lambda
+      - uses: actions/checkout@master
+      - uses: stcalica/update-lambda@master
         with:
           package: lambda.zip
           function-name: TEST-FUNCTION
