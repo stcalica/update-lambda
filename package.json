@@ -1,0 +1,21 @@
+{
+  "name": "update-lambda",
+  "version": "0.0.1",
+  "description": "AWS lambda update github action",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stcalica/update-lambda.git"
+  },
+  "author": "Kyle Calica",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/stcalica/update-lambda/issues"
+  },
+  "homepage": "https://github.com/stcalica/update-lambda#readme"
+}
