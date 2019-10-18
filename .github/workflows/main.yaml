@@ -5,10 +5,10 @@ jobs:
   lambda:
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@master
       - run: touch file.txt
       - run: zip lambda.zip file.txt
       - run: ls -al
-      - uses: actions/checkout@master
       - uses: stcalica/update-lambda@master
         with:
           package: lambda.zip
