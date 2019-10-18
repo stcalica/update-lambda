@@ -6,8 +6,8 @@ const AWS = require('aws-sdk');
 try {
   const functionName = core.getInput('function-name');
   const package = core.getInput('package');
-  const AWS_SECRET_KEY = core.setSecret(core.getInput('AWS_SECRET_KEY'));
-  const AWS_SECRET_ID = core.setSecret(core.getInput('AWS_SECRET_ID'));
+  const AWS_SECRET_KEY = core.getInput('AWS_SECRET_KEY');
+  const AWS_SECRET_ID = core.getInput('AWS_SECRET_ID');
   const AWS_REGION = core.getInput('AWS_REGION');
 
   console.log(`Updating Function Name ${functionName} with ${package}!`);
