@@ -6,7 +6,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@master
-      - run: touch file.txt
+      - run: cat "THIS IS A TEST PACKAGE" > file.txt
       - run: zip lambda.zip file.txt
       - run: file lambda.zip
       - uses: stcalica/update-lambda@master
