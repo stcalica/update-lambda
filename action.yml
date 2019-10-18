@@ -1,5 +1,5 @@
 name: 'AWS Update Lambda Action'
-description: 'Update Lambda Function in AWS'
+description: 'Update AWS Lambda Function'
 author: 'Kyle Calica'
 branding:
   icon: 'check-square'

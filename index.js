@@ -34,7 +34,7 @@ try {
   lambda.updateFunctionCode(params, err => {
       if (err) {
           console.error(err);
-          process.exit(3);
+          core.setFailed(err)
       }
   });
 
