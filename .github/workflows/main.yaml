@@ -8,7 +8,7 @@ jobs:
       - uses: actions/checkout@master
       - run: touch file.txt
       - run: zip lambda.zip file.txt
-      - run: ls -al
+      - run: file lambda.zip
       - uses: stcalica/update-lambda@master
         with:
           package: lambda.zip
