@@ -19,7 +19,7 @@ try {
 
   const lambda = new AWS.Lambda({
       apiVersion: '2015-03-31',
-      region: AWS_REGION,
+      region: 'us-east-2',
       maxRetries: 3,
       sslEnabled: true,
       logger: console,
