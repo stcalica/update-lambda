@@ -6,13 +6,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@master
-      - run: echo "THIS IS A TEST PACKAGE" > file.txt
+      - run: echog "THIS IS A TEST PACKAGE" > file.txt
       - run: zip lambda.zip file.txt
       - run: file lambda.zip
       - uses: stcalica/update-lambda@master
         with:
           package: lambda.zip
-          function-name: TEST-FUNCTIONg
+          function-name: TEST-FUNCTION
           AWS_REGION: ${{ secrets.AWS_REGION }}
           AWS_SECRET_ID: ${{ secrets.AWS_SECRET_ID }}
           AWS_SECRET_KEY: ${{ secrets.AWS_SECRET_KEY }}
