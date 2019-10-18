@@ -9,7 +9,7 @@ try {
   const AWS_SECRET_KEY = core.setSecret(core.getInput('AWS_SECRET_KEY'));
   const AWS_SECRET_ID = core.setSecret(core.getInput('AWS_SECRET_ID'));
   const AWS_REGION = core.setSecret(core.getInput('AWS_REGION'));
-
+  console.log(AWS_REGION);
   console.log(`Updating Function Name ${functionName} with ${package}!`);
   fs.readdirSync('.').forEach(file => {
     console.log(file);
@@ -19,7 +19,7 @@ try {
 
   const lambda = new AWS.Lambda({
       apiVersion: '2015-03-31',
-      region: AWS_REGION, // Or whichever region you use
+      region: AWS_REGION,
       maxRetries: 3,
       sslEnabled: true,
       logger: console,
