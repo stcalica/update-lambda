@@ -21,7 +21,7 @@ jobs:
       - uses: actions/checkout@master
       - run: echo "THIS IS A TEST PACKAGE" > file.txt
       - run: zip lambda.zip file.txt
-      - uses: stcalica/update-lambda
+      - uses: stcalica/update-lambda@master
         with:
           package: lambda.zip
           function-name: TEST-FUNCTION
